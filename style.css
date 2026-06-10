@@ -1,0 +1,14 @@
+header {
+    background-color: black;
+    color: #43a5cf;
+    font-family: "News Cycle";
+    font-size: 45px;
+    text-align: left;
+    height: 325px;
+    padding: 200px;
+}
+
+.crawl {
+    position: relative;
+    top: -75px;
+}
