@@ -24,18 +24,18 @@ header {
 
 @font-face {
     font-family: StarJedi;
-    src: url('StarJedi-DGRW.ttf') format('truetype');
+    src: url('Starjedi.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 .intro {
     font-size: 120px;
-    color: yellow;
+    color: #ffe81f;
     text-align: center;
     opacity: 0;
     position: absolute;
-    top: 300px;
+    top: 150px;
     left: 0;
     right: 0;
     font-family: "StarJedi";
@@ -56,11 +56,28 @@ body {
     margin: 0px;
 }
 
+.navbar {
+    background-color: darkblue;
+    border: solid black 3px;
+    height: 80px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navlink {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "News Cycle";
+}
+
 .starmap {
     background-image: url('https://png.pngtree.com/png-vector/20241231/ourmid/pngtree-cybernetic-square-frame-digital-age-aesthetics-png-image_15002608.png');
     background-repeat: no-repeat;
     background-size: cover;
-    color: yellow;
+    color: #ffe81f;
     text-align:center;
     width: 800px;
     height: 800px;
@@ -83,6 +100,12 @@ body {
 }
 
 .about {
-    color: yellow;
+    color: #ffe81f;
     text-align: center;
+    font-size: 45px;
+}
+
+.contact {
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 150px;
 }
