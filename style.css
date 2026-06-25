@@ -79,8 +79,8 @@ body {
     background-size: cover;
     color: #ffe81f;
     text-align:center;
-    width: 700px;
-    height: 700px;
+    width: 800px;
+    height: 800px;
     margin: 0 auto;
     padding: 100px;
     box-sizing: border-box;
@@ -110,23 +110,129 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
     gap: 80px;
-    overflow: hidden;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
     width: fit-content;
 }
 
-.planet {
-    width: 130px;
-    height: 130px;
+.planetMustafar {
+    width: 150px;
+    height: 150px;
     background-color: transparent;
     border: none;
 }
 
-.planet img{
-    width: 130px;
-    height: 130px;
+.planetDeathStar {
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    border: none;
+}
+
+.planetTatooine {
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    border: none;
+}
+
+.planetNaboo {
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    border: none;
+}
+
+.planetMustafar img{
+    width: 150px;
+    height: 150px;
+}
+
+.planetDeathStar img{
+    width: 150px;
+    height: 150px;
+}
+
+.planetTatooine img{
+    width: 150px;
+    height: 150px;
+}
+
+.planetNaboo img{
+    width: 150px;
+    height: 150px;
+}
+
+.headshot {
+    width: 250px;
+}
+
+.mustafarScreen,
+.deathStarScreen {
+    display: none;
+}
+
+.mustafarContent {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.backButtonMustafar {
+    font-size: 20px;
+    width: 150px;
+}
+
+.mustafarText {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mustafarText h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.mustafarText p {
+    margin: 0;
+    font-size: 25px;
+}
+
+.hellbender {
+    width: 400px;
+}
+
+.deathStarContent h2 {
+    font-size: 30px;
+}
+
+.deathStarContent p {
+    font-size: 25px;
+}
+
+.backButtonDeathStar {
+    font-size: 20px;
+    width: 150px;
+}
+
+.planetMustafar:hover {
+    scale: 1.05;
+}
+
+.planetDeathStar:hover {
+    scale: 1.05;
+}
+
+.planetTatooine:hover {
+    scale: 1.05;
+}
+
+.planetNaboo:hover {
+    scale: 1.05;
 }
 
 .contact {
