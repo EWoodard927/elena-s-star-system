@@ -134,6 +134,7 @@ body {
     height: 130px;
     background-color: transparent;
     border: none;
+    text-align: center;
 }
 
 .planetDeathStar {
@@ -337,8 +338,40 @@ body {
 }
 
 .projectBox:hover {
-    scale: 1.04;
+    scale: 1.03;
     box-shadow: 0px 0px 16px #83EEFF;
+}
+
+.skillScreen {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skillBox {
+    width: 325px;
+    height: 450px;
+    background-color: black;
+    color: yellow;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: "StarJedi";
+    font-size: 35px;
+}
+
+.skillBox img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.skillBox:hover {
+    scale: 1.03;
+    box-shadow: 0px 0px 16px yellow;
 }
 
 .myMusic {
