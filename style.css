@@ -57,27 +57,33 @@ body {
 }
 
 .navbar {
-    background-color: darkblue;
-    border: solid black 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: solid yellow 1px;
     height: 80px;
-    color: white;
+    color: yellow;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: "StarJedi";
 }
 
 .navlink {
-    color: white;
+    color: yellow;
     text-decoration: none;
     font-size: 30px;
-    font-family: "News Cycle";
+    font-family: "StarJedi";
+    opacity: 1;
+}
+
+.navlink:hover {
+    color: #83EEFF;
 }
 
 .starmap {
     background-image: url('https://png.pngtree.com/png-vector/20241231/ourmid/pngtree-cybernetic-square-frame-digital-age-aesthetics-png-image_15002608.png');
     background-repeat: no-repeat;
     background-size: cover;
-    color: #ffe81f;
+    color: #83EEFF;
     text-align:center;
     width: 800px;
     height: 800px;
@@ -86,6 +92,7 @@ body {
     box-sizing: border-box;
     position: relative;
     padding: 130px;
+    font-family: "News Cycle";
 }
 
 .starmap::before {
@@ -100,9 +107,10 @@ body {
 }
 
 .about {
-    color: #ffe81f;
+    color: #83EEFF;
     text-align: center;
     font-size: 45px;
+    font-family: "News Cycle";
 }
 
 .starmapGrid {
@@ -116,60 +124,68 @@ body {
     width: fit-content;
 }
 
+.planetTag {
+    font-size: 20px;
+    color: #83EEFF;
+}
+
 .planetMustafar {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     background-color: transparent;
     border: none;
 }
 
 .planetDeathStar {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     background-color: transparent;
     border: none;
 }
 
 .planetTatooine {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     background-color: transparent;
     border: none;
 }
 
 .planetNaboo {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     background-color: transparent;
     border: none;
 }
 
 .planetMustafar img{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
 }
 
 .planetDeathStar img{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
 }
 
 .planetTatooine img{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
 }
 
 .planetNaboo img{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
 }
 
 .headshot {
     width: 250px;
+    border: dashed #83EEFF 3px;
 }
 
 .mustafarScreen,
-.deathStarScreen {
+.deathStarScreen,
+.nabooScreen,
+.tatooineScreen {
     display: none;
 }
 
@@ -199,11 +215,12 @@ body {
 
 .mustafarText p {
     margin: 0;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .hellbender {
-    width: 400px;
+    width: 350px;
+    border: dashed #83EEFF 3px;
 }
 
 .deathStarContent h2 {
@@ -211,10 +228,54 @@ body {
 }
 
 .deathStarContent p {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .backButtonDeathStar {
+    font-size: 20px;
+    width: 150px;
+}
+
+.gencon {
+    width: 350px;
+    border: dashed #83EEFF 3px;
+}
+
+.tatooineContent h2 {
+    font-size: 30px;
+}
+
+.tatooineContent p {
+    font-size: 22px;
+}
+
+.backButtonTatooine {
+    font-size: 20px;
+    width: 150px;
+}
+
+.conservationHike {
+    width: 250px;
+    border: dashed #83EEFF 3px;
+}
+
+.nabooContent {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.nabooContent h2 {
+    font-size: 30px;
+}
+
+.nabooContent p {
+    font-size: 22px;
+}
+
+.backButtonNaboo {
     font-size: 20px;
     width: 150px;
 }
@@ -250,15 +311,51 @@ body {
 }
 
 .projectBox {
-    width: 400px;
-    height: 300px;
+    width: 375px;
+    height: 450px;
     background-color: black;
-    color: yellow;
+    color: #83EEFF;
     align-items: center;
     text-align: center;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .projectHeader {
     color: yellow;
     text-align: center;
+    font-size: 42px;
+}
+
+.projectBox p {
+    font-size: 25px;
+}
+
+.projectBox img{
+    width: 375px;
+    border-radius: 10px;
+}
+
+.projectBox:hover {
+    scale: 1.04;
+    box-shadow: 0px 0px 16px #83EEFF;
+}
+
+.myMusic {
+    color: #83EEFF;
+    font-family: "News Cycle";
+    text-align: center;
+    background-color: black;
+    height: 450px;
+    margin: 0px;
+    padding: 20px;
+}
+
+.soundtrackMenu {
+    color: #83EEFF;
+    font-family: "News Cycle";
+    text-align: center;
+    height: 300px;
+    margin: 0px;
+    padding: 20px;
 }
