@@ -73,6 +73,7 @@ body {
     font-size: 30px;
     font-family: "StarJedi";
     opacity: 1;
+    transition: color .3s ease-in-out;
 }
 
 .navlink:hover {
@@ -135,6 +136,7 @@ body {
     background-color: transparent;
     border: none;
     text-align: center;
+    transition: scale .3s ease-in-out;
 }
 
 .planetDeathStar {
@@ -142,6 +144,7 @@ body {
     height: 130px;
     background-color: transparent;
     border: none;
+    transition: scale .3s ease-in-out;
 }
 
 .planetTatooine {
@@ -149,6 +152,7 @@ body {
     height: 130px;
     background-color: transparent;
     border: none;
+    transition: scale .3s ease-in-out;
 }
 
 .planetNaboo {
@@ -156,6 +160,7 @@ body {
     height: 130px;
     background-color: transparent;
     border: none;
+    transition: scale .3s ease-in-out;
 }
 
 .planetMustafar img{
@@ -282,19 +287,19 @@ body {
 }
 
 .planetMustafar:hover {
-    scale: 1.05;
+    scale: 1.07;
 }
 
 .planetDeathStar:hover {
-    scale: 1.05;
+    scale: 1.07;
 }
 
 .planetTatooine:hover {
-    scale: 1.05;
+    scale: 1.07;
 }
 
 .planetNaboo:hover {
-    scale: 1.05;
+    scale: 1.07;
 }
 
 .contact {
@@ -320,6 +325,8 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
+    transition: .4s box-shadow ease-in-out;
+    transition: .4s scale ease-in-out;
 }
 
 .projectHeader {
@@ -362,6 +369,8 @@ body {
     border-radius: 10px;
     font-family: "StarJedi";
     font-size: 35px;
+    transition: .4s box-shadow ease-in-out;
+    transition: .4s scale ease-in-out;
 }
 
 .skillBox img {
@@ -379,9 +388,41 @@ body {
     font-family: "News Cycle";
     text-align: center;
     background-color: black;
-    height: 450px;
+    height: 575px;
     margin: 0px;
     padding: 20px;
+    background-image: url('galaxy_line.webp');
+    background-repeat: no-repeat;
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.myMusicContent {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.myMusicContent img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.musicDivider {
+    margin: 0px;
+    border: solid #83EEFF 3px;
+}
+
+.violinParagraph {
+    width: 550px;
+    height: 325px;
+    font-size: 25px;
+    font-family: "News Cycle";
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 40px;
+    text-align: center;
 }
 
 .soundtrackMenu {

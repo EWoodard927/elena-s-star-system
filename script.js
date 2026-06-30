@@ -13,6 +13,10 @@ let backButtonDeathStar = document.querySelector(".backButtonDeathStar");
 let backButtonTatooine = document.querySelector(".backButtonTatooine");
 let backButtonNaboo = document.querySelector(".backButtonNaboo");
 
+setTimeout(function(){
+    document.getElementById("themeAudio").play();
+}, 7100);
+
 planetMustafar.addEventListener('click', function(){
     starmapGrid.style.display = "none";
     destinationHeader.style.display = "none";
