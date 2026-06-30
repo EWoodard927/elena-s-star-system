@@ -433,3 +433,28 @@ body {
     margin: 0px;
     padding: 20px;
 }
+
+.contactForm {
+    width: 800px;
+    height: 485px;
+    font-size: 18px;
+    font-family: "News Cycle";
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .7);
+    padding: 25px;
+    margin: 0 auto;
+}
+
+.nameInput,
+.emailInput {
+    width: 475px;
+    height: auto;
+    font-size: 14px;
+}
+
+.messageInput {
+    display: block;
+    width: 475px;
+    height: auto;
+    font-size: 14px;
+}

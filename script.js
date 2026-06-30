@@ -12,6 +12,7 @@ let backButtonMustafar = document.querySelector(".backButtonMustafar");
 let backButtonDeathStar = document.querySelector(".backButtonDeathStar");
 let backButtonTatooine = document.querySelector(".backButtonTatooine");
 let backButtonNaboo = document.querySelector(".backButtonNaboo");
+let themeAudio = document.getElementById("themeAudio");
 
 setTimeout(function(){
     document.getElementById("themeAudio").play();
