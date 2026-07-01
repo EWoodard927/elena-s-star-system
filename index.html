@@ -10,41 +10,41 @@
     <script defer src="script.js"></script>
 
     <body>
-    <header>
+    <header class="movieScreen">
         <h1 class="crawl">A long time ago in a galaxy far, far away...</h1>
         <h1 class="intro">Elena Woodard</h1>
     </header>
-    <audio id="themeAudio">
+    <audio id="themeAudio" controls loop>
         <source src="StarWarsTheme.mp3" type="audio/mpeg">
     </audio>
-<div id="aboutMeSection">
     <div class="navbar">
-        <a class="navlink" href="index.html#aboutMeSection">Home</a>
-        <a class="navlink" href="projects.html">My Projects</a>
-        <a class="navlink" href="skills.html">My Skills</a>
-        <a class="navlink" href="music.html">Music Menu</a>
-        <a class="navlink" href="contact.html">Contact</a>
+        <p class="homeNavlink">Home</p>
+        <p class="projectNavlink">My Projects</p>
+        <p class="skillNavlink">My Skills</p>
+        <p class="musicNavlink">Music Menu</p>
+        <p class="contactNavlink">Contact</p>
     </div>
-</br>
+
+<div class="homeBlock">
     <h1 class="about">About Me</h1>
     <div class="starmap">
         <h1 class="destinationHeader">Choose your destination</h1>
     </br>
         <div class="starmapGrid">
             <button class="planetMustafar">
-                <img src="https://holonet.imperialba.se/system/accounts/avatars/113/518/668/593/508/398/original/86c49f91ec657bc9.png">
+                <img alt="The red planet Mustafar" src="https://holonet.imperialba.se/system/accounts/avatars/113/518/668/593/508/398/original/86c49f91ec657bc9.png">
                 <span class="planetTag">Intro</span>
             </button>
             <button class="planetDeathStar">
-                <img src="https://pngpix.com/images/hd/death-star-space-station-render-f3zigezsl8r755zq.jpg">
+                <img alt="The Death Star in the process of being rebuilt" src="https://pngpix.com/images/hd/death-star-space-station-render-f3zigezsl8r755zq.jpg">
                 <span class="planetTag">Future Aspirations</span>
             </button>
             <button class="planetTatooine">
-                <img src="https://custom.swcombine.com/static/8/632-large-1675095606.png">
+                <img alt="The dusty desert planet Tatooine" src="https://custom.swcombine.com/static/8/632-large-1675095606.png">
                 <span class="planetTag">Hobbies</span>
             </button>
             <button class="planetNaboo">
-                <img src="https://png.pngtree.com/png-vector/20231001/ourmid/pngtree-three-dimensional-3d-planet-earth-model-universe-decorative-pattern-cutout-png-image_10132295.png">
+                <img alt="The blue and green planet Naboo" src="https://png.pngtree.com/png-vector/20231001/ourmid/pngtree-three-dimensional-3d-planet-earth-model-universe-decorative-pattern-cutout-png-image_10132295.png">
                 <span class="planetTag">Leadership</span>
             </button>
         </div>
@@ -53,7 +53,7 @@
          </br>
          </br>
             <div class="mustafarContent">
-            <img class="headshot" src="Elena Woodard_2.jpg">
+            <img alt="A headshot of Elena Woodard" class="headshot" src="Elena Woodard_2.jpg">
            <div class="mustafarText">
             <h2>Hey, nice to meet you!</h2>
             <p>I'm Elena, an incoming senior at Signature School with a love for science and animals. This year, I'm trying my hand at computer science, a far cry from my normal work in biology and environmental science.</p>
@@ -65,7 +65,7 @@
 
         <div class="deathStarScreen">
             <div class="deathStarContent">
-            <img class="hellbender" src="hellbender-in-the-salamander-exhibit-of-the-tennessee-aquarium-1920x.jpg">
+            <img alt="A brown salamander swimming in a tank" class="hellbender" src="hellbender-in-the-salamander-exhibit-of-the-tennessee-aquarium-1920x.jpg">
             <p>I plan on studying biology and environmental science in college before going on into a career in wildlife biology. I've already done some work in school, analyzing Indiana's dwindling eastern hellbender salamander population (pictured above).</p>
             </div>
         </br>
@@ -74,7 +74,7 @@
 
         <div class="tatooineScreen">
             <div class="tatooineContent">
-                <img class="gencon" src="gencon_2024.jpg">
+                <img alt="A girl wearing cosplay and posing with two other characters" class="gencon" src="gencon_2024.jpg">
                 <p>On the side, I like to make my own costumes for Halloween and the annual GenCon in Indianapolis. Star Wars is a particular favorite of mine, as you can likely see by my themed portfolio.</p>
             </div>
         </br>
@@ -85,14 +85,121 @@
             </br>
             </br>
             <div class="nabooContent">
-            <img class="conservationHike" src="conservation_club_hike_2025.jpg">
+            <img alt="A group of kids posing on a hiking trail" class="conservationHike" src="conservation_club_hike_2025.jpg">
             <p>At school, I'm the new vice president of our conservation club, where we raise money for local organizations, like Wesselman Woods, as well as global organizations, such as WaterAid. This marks my 4th year of active membership!</p>
             </div>
         </br>
             <button class="backButtonNaboo">Go back</button>
         </div>
     </div>
+</br>
+</br>
+</br>
+    <div class="featureMenu">
+            <button id="audioToggle" class="audioOff">Disable Audio</button>
+            <button id="modeToggle" class="lightMode">Light Mode</button>
+    </div>
 </div>
+
+<div class="projectBlock">
+    <h1 class="projectHeader">Here are the projects I've been working on!</h1>
+    </br>
+</br>
+    <div class="projectScreen">
+        <div class="projectBox">
+            <img alt="A website page displaying a service dog on the cover" class="projectPic" src="Screenshot 2026-06-26 155503.png">
+            <h2 class="projectName">City Service Dog Initiative</h2>
+            <p class="projectDescription">The front page for a website that advocates for the rights of service dog owners. No relation to an actual organization. This project utilizes HTML and CSS.</p>
+        </div>
+
+        <div class="projectBox">
+            <img alt="A videogame screen displaying a Pokemon" class="projectPic" src="Screenshot 2026-06-26 152902.png">
+            <h2 class="projectName">Pokemon: Catapult Edition</h2>
+            <p class="projectDescription">A mesh between a choose-your-own-adventure game and a Pokemon battle simulator! Choose your Pokemon and defeat your rival. This project utilizes HTML, CSS, and Javascript.</p>
+        </div>
+
+        <div class="projectBox">
+            <img alt="A buzzfeed quiz with a Star Wars theme" class="projectPic" src="Screenshot 2026-06-29 124651.png">
+            <h2 class="projectName">Lightsaber Color Quiz</h2>
+            <p class="projectDescription">Have you ever wondered what kind of lightsaber color you would have? Well, all you have to do is answer five questions to find out! This project utilizes HTML, CSS, and Javascript.</p>
+        </div>
+    </div>
+    </br>
+    </br>
+    </br>
+</div>
+
+<div class="skillBlock">
+    <h1>Just a few of the skills I've accumulated over the course of the Catapult internship</h1>
+</br>
+    <div class="skillScreen">
+        <div class="skillBox">
+            <img alt="The HTML logo" class="skillIcon" src="htmlLogo.png">
+            <h2 class="skillName">HTML</h2>
+        </div>
+
+        <div class="skillBox">
+            <img alt="The CSS logo" class="skillIcon" src="cssLogo.png">
+            <h2 class="skillName">CSS</h2>
+        </div>
+
+        <div class="skillBox">
+            <img alt="The Javascript logo" class="skillIcon" src="js-javascript-round-logo-icon-png-7017516947717339mnyf7eumy-removebg-preview.png">
+            <h2 class="skillName">Javascript</h2>
+        </div>
+    </div>
+</div>
+
+<div class="musicBlock">
+    <div class="myMusic">
+        <h1>On top of being a scientist, I'm also a passionate violinist!</h1>
+    </br>
+        <div class="myMusicContent">
+            <img alt="A girl playing the violin with an orchestra" src="EPYO_playing.jpg">
+            <p class="violinParagraph">I've been playing violin since I was 5 years old, and it's such an important part of my life. While I play for my school orchestra during the week, I also participate in the Evansville Philharmonic Youth Orchestra. The most recent addition to my orchestral activities is the Evansville Youth Music Collective, a student-run organization in which we visit nursing homes to put on concerts, giving donations to fund Alzheimer's research.</p>
+        </div>
+    </br>
+    </div>
+    <hr class="musicDivider">
+
+    <div class="soundtrackMenu">
+        <h1>What's the best part of the Star Wars films? The music!</h1>
+        <p>Click here to check out some pieces from my favorite soundtracks.</p>
+        <div class="soundtrackButtons">
+            <button class="soundtrackButton1">
+                <img alt="The outline of the Millenium Falcon, a spaceship" src="falconIcon.png">
+                <h3 class="soundtrackHeader1">Currently playing...</h3>
+            </button>
+            <button class="soundtrackButton2">
+                <img alt="The outline of Darth Vader's helmet" src="Darth-Vader-icon.png">
+                <h3 class="soundtrackHeader2">Battle of the Heroes</h3>
+            </button>
+            <button class="soundtrackButton3">
+                <img alt="The outline of R2D2, a robot" src="r2d2Icon.png">
+                <h3 class="soundtrackHeader3">Princess Leia's Theme</h3>
+            </button>
+            <button class="soundtrackButton4">
+                <img alt="The outline of BB8, a robot" src="bb8-Icon.png">
+                <h3 class="soundtrackHeader4">Rey's Theme</h3>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="contactBlock">
+    <h1>Want to reach out?</h1>
+    <div class="contactScreen">
+        <div class="contactForm">
+        <h4>Name (first and last)</h4>
+        <input type="text" class="nameInput" placeholder="Ex: Leia Organa"></input>
+        <h4>Email</h4>
+        <input type="text" class="emailInput" placeholder="Ex: LeiaOrgana@gmail.com"></input>
+        <h4>Message</h4>
+        <input type="text" class="messageInput" placeholder="Ex: Help me Obi-Wan Kenobi, you're my only hope."></input>
+        </div>
+    </div>
+</div>
+
 </br>
 </br>
 </br>
