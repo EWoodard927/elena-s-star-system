@@ -32,12 +32,34 @@ let soundtrackHeader1 =document.querySelector(".soundtrackHeader1");
 let soundtrackHeader2 =document.querySelector(".soundtrackHeader2");
 let soundtrackHeader3 =document.querySelector(".soundtrackHeader3");
 let soundtrackHeader4 =document.querySelector(".soundtrackHeader4");
+let currentAudio = "StarWarsTheme.mp3";
 let crawl = document.querySelector(".crawl");
 let intro = document.querySelector(".intro");
 let audioOff = document.querySelector(".audioOff");
 let lightMode = document.querySelector(".lightMode");
 let audioOn = document.querySelector(".audioOn");
 let darkMode = document.querySelector(".darkMode");
+let audioAlert = document.querySelector(".audioAlert");
+let sendButton = document.querySelector(".sendButton");
+let messageInput = document.querySelector(".messageInput");
+
+//For light mode purposes:
+let navbar = document.querySelector(".navbar");
+let starmap = document.querySelector(".starmap");
+let planetTag = document.querySelector(".planetTag");
+let planetTags = document.querySelectorAll(".planetTag");
+let citeButton = document.querySelector(".citeButton");
+let projectBox = document.querySelector(".projectBox");
+let projectBoxes = document.querySelectorAll(".projectBox");
+let projectScreen = document.querySelector(".projectScreen");
+let projectHeader = document.querySelector(".projectHeader");
+let skillScreen = document.querySelector(".skillScreen");
+let skillHeader = document.querySelector(".skillHeader");
+let skillBox = document.querySelector(".skillBox");
+let skillBoxes = document.querySelectorAll(".skillBox")
+let myMusic = document.querySelector(".myMusic");
+let soundtrackMenu = document.querySelector(".soundtrackMenu");
+let violinParagraph = document.querySelector(".violinParagraph");
 
 setTimeout(function(){
     document.getElementById("themeAudio").play();
@@ -140,8 +162,191 @@ contactNavlink.addEventListener('click', function(){
 
 audioOff.addEventListener('click', function(){
     themeAudio.src = "";
-    
+    audioOff.style.display = "none";
+    audioOn.style.display = "block";
+    soundtrackHeader1.innerHTML = "Main Theme";
+    soundtrackHeader1.style.color = "black";
+    soundtrackHeader2.innerHTML = "Battle of the Heroes";
+    soundtrackHeader2.style.color = "black";
+    soundtrackHeader3.innerHTML = "Princess Leia's Theme";
+    soundtrackHeader3.style.color = "black";
+    soundtrackHeader4.innerHTML = "Rey's Theme";
+    soundtrackHeader4.style.color = "black";
+    soundtrackButton1.disabled = true;
+    soundtrackButton2.disabled = true;
+    soundtrackButton3.disabled = true;
+    soundtrackButton4.disabled = true;
+    audioAlert.style.display = "block";
 });
+
+audioOn.addEventListener('click', function(){
+    themeAudio.src = currentAudio;
+    audioOff.style.display = "block";
+    audioOn.style.display = "none";
+    soundtrackButton1.disabled = false;
+    soundtrackButton2.disabled = false;
+    soundtrackButton3.disabled = false;
+    soundtrackButton4.disabled = false;
+    audioAlert.style.display = "none";
+    
+    if (currentAudio === "StarWarsTheme.mp3"){
+    soundtrackHeader1.innerHTML = "Currently playing...";
+    soundtrackHeader1.style.color = "red";
+    soundtrackHeader2.innerHTML = "Battle of the Heroes";
+    soundtrackHeader2.style.color = "black";
+    soundtrackHeader3.innerHTML = "Princess Leia's Theme";
+    soundtrackHeader3.style.color = "black";
+    soundtrackHeader4.innerHTML = "Rey's Theme";
+    soundtrackHeader4.style.color = "black";
+    }
+
+    else if (currentAudio === "03 Battle Of The Heroes.mp3"){
+    soundtrackHeader1.innerHTML = "Main Theme";
+    soundtrackHeader1.style.color = "black";
+    soundtrackHeader2.innerHTML = "Currently playing...";
+    soundtrackHeader2.style.color = "red";
+    soundtrackHeader3.innerHTML = "Princess Leia's Theme";
+    soundtrackHeader3.style.color = "black";
+    soundtrackHeader4.innerHTML = "Rey's Theme";
+    soundtrackHeader4.style.color = "black";
+    }
+
+    else if (currentAudio === "14 Princess Leia's Theme.mp3"){
+    soundtrackHeader1.innerHTML = "Main Theme";
+    soundtrackHeader1.style.color = "black";
+    soundtrackHeader2.innerHTML = "Battle of the Heroes";
+    soundtrackHeader2.style.color = "black";
+    soundtrackHeader3.innerHTML = "Currently playing...";
+    soundtrackHeader3.style.color = "red";
+    soundtrackHeader4.innerHTML = "Rey's Theme";
+    soundtrackHeader4.style.color = "black";
+    }
+
+    else if (currentAudio === "06 Rey's Theme.mp3"){
+    soundtrackHeader1.innerHTML = "Main Theme";
+    soundtrackHeader1.style.color = "black";
+    soundtrackHeader2.innerHTML = "Battle of the Heroes";
+    soundtrackHeader2.style.color = "black";
+    soundtrackHeader3.innerHTML = "Princess Leia's Theme";
+    soundtrackHeader3.style.color = "black";
+    soundtrackHeader4.innerHTML = "Currently playing...";
+    soundtrackHeader4.style.color = "red";
+    }
+
+    else {
+    soundtrackHeader1.innerHTML = "Currently playing...";
+    soundtrackHeader1.style.color = "red";
+    soundtrackHeader2.innerHTML = "Battle of the Heroes";
+    soundtrackHeader2.style.color = "black";
+    soundtrackHeader3.innerHTML = "Princess Leia's Theme";
+    soundtrackHeader3.style.color = "black";
+    soundtrackHeader4.innerHTML = "Rey's Theme";
+    soundtrackHeader4.style.color = "black";
+    }
+
+    themeAudio.load();
+    themeAudio.play();
+});
+
+lightMode.addEventListener('click', function(){
+    navbar.style.borderColor = "black";
+    navbar.style.color = "black";
+    navbar.style.backgroundColor = "rgba(255, 255, 255, .7)";
+    homeNavlink.style.color = "black";
+    projectNavlink.style.color = "black";
+    skillNavlink.style.color = "black";
+    musicNavlink.style.color = "black";
+    contactNavlink.style.color = "black";
+    starmap.style.color = "black";
+
+    planetTags.forEach(planetTag => {
+        planetTag.style.color = "black";
+    })
+
+    citeButton.style.borderColor = "black";
+    citeButton.style.backgroundColor = "white";
+    citeButton.style.color = "black";
+    audioOff.style.borderColor = "black";
+    audioOff.style.color = "black";
+    audioOff.style.backgroundColor = "white";
+    audioOn.style.borderColor = "black";
+    audioOn.style.backgroundColor = "white";
+    audioOn.style.color = "black";
+    audioAlert.style.color = "darkred";
+
+    projectBoxes.forEach(projectBox => {
+        projectBox.style.backgroundColor = "white";
+        projectBox.style.color = "black";
+    });
+
+    skillBoxes.forEach(skillBox => {
+        skillBox.style.backgroundColor = "white";
+        skillBox.style.color = "black";
+    });
+
+    projectHeader.style.color = "darkblue";
+    myMusic.style.backgroundColor = "white";
+    myMusic.style.color = "black";
+    soundtrackMenu.style.backgroundColor = "white";
+    soundtrackMenu.style.color = "black";
+    violinParagraph.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+    violinParagraph.style.color = "black";
+    musicBlock.style.backgroundColor = "white";
+
+    lightMode.style.display = "none";
+    darkMode.style.display = "block";
+});
+
+darkMode.addEventListener('click', function(){
+    navbar.style.borderColor = "yellow";
+    navbar.style.color = "yellow";
+    navbar.style.backgroundColor = "rgba(0, 0, 0, .7)";
+    homeNavlink.style.color = "yellow";
+    projectNavlink.style.color = "yellow";
+    skillNavlink.style.color = "yellow";
+    musicNavlink.style.color = "yellow";
+    contactNavlink.style.color = "yellow";
+    starmap.style.color = "#83EEFF";
+
+    planetTags.forEach(planetTag => {
+        planetTag.style.color = "#83EEFF";
+    })
+
+    citeButton.style.borderColor = "yellow";
+    citeButton.style.backgroundColor = "black";
+    citeButton.style.color = "yellow";
+    audioOff.style.borderColor = "yellow";
+    audioOff.style.color = "yellow";
+    audioOff.style.backgroundColor = "black";
+    audioOn.style.borderColor = "yellow";
+    audioOn.style.backgroundColor = "black";
+    audioOn.style.color = "yellow";
+    audioAlert.style.color = "red";
+
+    projectBoxes.forEach(projectBox => {
+        projectBox.style.backgroundColor = "black";
+        projectBox.style.color = "#83EEFF";
+    });
+
+    skillBoxes.forEach(skillBox => {
+        skillBox.style.backgroundColor = "black";
+        skillBox.style.color = "yellow";
+    });
+
+    projectHeader.style.color = "yellow";
+    myMusic.style.backgroundColor = "black";
+    myMusic.style.color = "#83EEFF";
+    soundtrackMenu.style.backgroundColor = "transparent";
+    soundtrackMenu.style.color = "#83EEFF";
+    violinParagraph.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+    violinParagraph.style.color = "#83EEFF";
+    musicBlock.style.backgroundColor = "transparent";
+
+    lightMode.style.display = "block";
+    darkMode.style.display = "none";
+});
+
+
 
 soundtrackButton1.addEventListener('click', function(){
     themeAudio.src = "StarWarsTheme.mp3";
@@ -155,6 +360,7 @@ soundtrackButton1.addEventListener('click', function(){
     soundtrackHeader3.style.color = "black";
     soundtrackHeader4.innerHTML = "Rey's Theme";
     soundtrackHeader4.style.color = "black";
+    currentAudio = "StarWarsTheme.mp3";
 });
 
 soundtrackButton2.addEventListener('click', function(){
@@ -169,6 +375,7 @@ soundtrackButton2.addEventListener('click', function(){
     soundtrackHeader3.style.color = "black";
     soundtrackHeader4.innerHTML = "Rey's Theme";
     soundtrackHeader4.style.color = "black";
+    currentAudio = "03 Battle Of The Heroes.mp3";
 });
 
 soundtrackButton3.addEventListener('click', function(){
@@ -183,6 +390,7 @@ soundtrackButton3.addEventListener('click', function(){
     soundtrackHeader3.style.color = "red";
     soundtrackHeader4.innerHTML = "Rey's Theme";
     soundtrackHeader4.style.color = "black";
+    currentAudio = "14 Princess Leia's Theme.mp3";
 });
 
 soundtrackButton4.addEventListener('click', function(){
@@ -197,4 +405,11 @@ soundtrackButton4.addEventListener('click', function(){
     soundtrackHeader3.style.color = "black";
     soundtrackHeader4.innerHTML = "Currently playing...";
     soundtrackHeader4.style.color = "red";
+    currentAudio = "06 Rey's Theme.mp3";
 });
+
+sendButton.addEventListener('click', function(){
+    let messageInputValue = messageInput.value;
+    messageInputValue = messageInputValue.replace(" ", "%20");
+    window.location.href="mailto:ElenaWoodard27@gmail.com? &body="+ messageInputValue;
+})

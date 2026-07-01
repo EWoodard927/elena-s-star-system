@@ -159,8 +159,9 @@ body {
     padding: 100px;
     box-sizing: border-box;
     position: relative;
+    bottom: 85px;
     padding: 130px;
-    font-family: "News Cycle";
+    font-family: "Space Grotesk";
 }
 
 .starmap::before {
@@ -195,6 +196,7 @@ body {
 .planetTag {
     font-size: 20px;
     color: #83EEFF;
+    font-family: "Space Grotesk";
 }
 
 .planetMustafar {
@@ -279,6 +281,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-family: "Space Grotesk";
 }
 
 .mustafarText h2 {
@@ -298,10 +301,12 @@ body {
 
 .deathStarContent h2 {
     font-size: 30px;
+    font-family: "Space Grotesk";
 }
 
 .deathStarContent p {
     font-size: 22px;
+    font-family: "Space Grotesk";
 }
 
 .backButtonDeathStar {
@@ -316,10 +321,12 @@ body {
 
 .tatooineContent h2 {
     font-size: 30px;
+    font-family: "Space Grotesk";
 }
 
 .tatooineContent p {
     font-size: 22px;
+    font-family: "Space Grotesk";
 }
 
 .backButtonTatooine {
@@ -338,6 +345,7 @@ body {
     margin: 0 auto;
     align-items: flex-start;
     gap: 20px;
+    font-family: "Space Grotesk";
 }
 
 .nabooContent h2 {
@@ -374,33 +382,80 @@ body {
 }
 
 .featureMenu {
+    display: flex;
     position: absolute;
     bottom: 20px;
     right: 20px;
-    display: flex;
     gap: 20px;
+}
+
+.citeButton {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    border: solid yellow 2px;
+    background-color: black;
+    color: yellow;
+    font-family: "StarJedi";
+    font-size: 18px;
+    transition: .4s box-shadow ease-in-out;
+    transition: .4s scale ease-in-out;
 }
 
 .audioOff,
 .lightMode {
     padding: 20px;
     border-radius: 8px;
-    border: solid #83EEFF 2px;
-    background-color: black;
-    color: yellow;
+    border: solid yellow 2px;
     font-family: "StarJedi";
     font-size: 18px;
+    transition: .4s box-shadow ease-in-out;
+    transition: .4s scale ease-in-out;
+}
+
+.audioOff {
+    background-color: black;
+    color: yellow;
+}
+
+.lightMode {
+    background-color: white;
+    color: black;
 }
 
 .audioOn,
 .darkMode {
     padding: 20px;
     border-radius: 8px;
-    border: solid #83EEFF 2px;
+    border: solid yellow 2px;
     background-color: black;
     color: yellow;
     font-family: "StarJedi";
     font-size: 18px;
+    display: none;
+    transition: .4s box-shadow ease-in-out;
+    transition: .4s scale ease-in-out;
+}
+
+.darkMode {
+    display: "none";
+}
+
+.audioOff:hover,
+.lightMode:hover,
+.audioOn:hover,
+.darkMode:hover,
+.citeButton:hover {
+    scale: 1.03;
+    box-shadow: 0px 0px 16px yellow;
+}
+
+.audioAlert {
+    display: none;
+    color: red;
+    font-family: "Space Grotesk";
 }
 
 .projectScreen {
@@ -423,26 +478,33 @@ body {
     border-radius: 10px;
     transition: .4s box-shadow ease-in-out;
     transition: .4s scale ease-in-out;
+    font-family: "Space Grotesk";
 }
 
 .projectHeader {
     color: yellow;
     text-align: center;
     font-size: 42px;
+    font-family: "Space Grotesk";
 }
 
 .projectBox p {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .projectBox img{
     width: 375px;
     border-radius: 10px;
+    border: solid black 3px;
 }
 
 .projectBox:hover {
     scale: 1.03;
     box-shadow: 0px 0px 16px #83EEFF;
+}
+
+.projectLink {
+    text-decoration: none;
 }
 
 .skillScreen {
@@ -452,6 +514,13 @@ body {
     gap: 60px;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.skillHeader {
+    color: yellow;
+    text-align: center;
+    font-size: 42px;
+    font-family: "Space Grotesk";
 }
 
 .skillBox {
@@ -481,7 +550,7 @@ body {
 
 .myMusic {
     color: #83EEFF;
-    font-family: "News Cycle";
+    font-family: "Space Grotesk";
     text-align: center;
     background-color: black;
     height: 575px;
@@ -514,7 +583,7 @@ body {
     width: 550px;
     height: 325px;
     font-size: 25px;
-    font-family: "News Cycle";
+    font-family: "Space Grotesk";
     border-radius: 10px;
     background-color: rgba(0, 0, 0, .7);
     padding: 40px;
@@ -523,11 +592,19 @@ body {
 
 .soundtrackMenu {
     color: #83EEFF;
-    font-family: "News Cycle";
+    font-family: "Space Grotesk";;
     text-align: center;
-    height: 400px;
+    height: 500px;
     margin: 0px;
     padding: 20px;
+}
+
+.soundtrackMenu h1 {
+    font-size: 38px;
+}
+
+.soundtrackMenu p {
+    font-size: 25px;
 }
 
 .soundtrackButtons {
@@ -539,10 +616,10 @@ body {
 .soundtrackButton1 {
     padding: 20px;
     width: 200px;
-    height: 265px;
+    height: 275px;
     background-color: rgba(255, 255, 255, .7);
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 20px;
     transition: .3s box-shadow ease-in-out;
     transition: .3s scale ease-in-out;
     color: red;
@@ -553,10 +630,10 @@ body {
 .soundtrackButton4 {
     padding: 20px;
     width: 200px;
-    height: 265px;
+    height: 275px;
     background-color: rgba(255, 255, 255, .7);
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 20px;
     transition: .3s box-shadow ease-in-out;
     transition: .3s scale ease-in-out;
 }
@@ -577,15 +654,54 @@ body {
     height: 150px;
 }
 
-.contactForm {
-    width: 800px;
-    height: 485px;
+.contactBlock {
+    height: 700px;
+}
+
+.contactScreen {
+    width: 900px;
+    height: 600px;
     font-size: 18px;
-    font-family: "News Cycle";
+    font-family: "Space Grotesk";
     border-radius: 10px;
     background-color: rgba(255, 255, 255, .7);
     padding: 25px;
     margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+
+.contactForm {
+    width: 500px;
+}
+
+.sendEmail {
+    padding: 20px;
+    border-radius: 8px;
+    border: solid yellow 2px;
+    background-color: black;
+    color: yellow;
+    font-family: "StarJedi";
+    font-size: 18px;
+    transition: .4s box-shadow ease-in-out;
+    transition: .4s scale ease-in-out;
+    align-items: center;
+    text-align: center;
+}
+
+.sendEmail:hover {
+    scale: 1.03;
+    box-shadow: 0px 0px 16px yellow;
+}
+
+.contactInfo {
+    display: column;
+}
+
+.contactInfo img {
+    width: 375px;
+    align-items: center;
+    text-align: center;
 }
 
 .nameInput,
@@ -598,6 +714,6 @@ body {
 .messageInput {
     display: block;
     width: 475px;
-    height: auto;
+    height: 200px;
     font-size: 14px;
 }
