@@ -40,7 +40,9 @@ let lightMode = document.querySelector(".lightMode");
 let audioOn = document.querySelector(".audioOn");
 let darkMode = document.querySelector(".darkMode");
 let audioAlert = document.querySelector(".audioAlert");
-let sendButton = document.querySelector(".sendButton");
+let sendEmail = document.querySelector(".sendEmail");
+let nameInput = document.querySelector(".nameInput");
+let emailInput = document.querySelector(".emailInput");
 let messageInput = document.querySelector(".messageInput");
 
 //For light mode purposes:
@@ -58,8 +60,10 @@ let skillHeader = document.querySelector(".skillHeader");
 let skillBox = document.querySelector(".skillBox");
 let skillBoxes = document.querySelectorAll(".skillBox")
 let myMusic = document.querySelector(".myMusic");
+let musicHeader = document.querySelector(".musicHeader");
 let soundtrackMenu = document.querySelector(".soundtrackMenu");
 let violinParagraph = document.querySelector(".violinParagraph");
+let aboutHeader = document.querySelector(".about");
 
 setTimeout(function(){
     document.getElementById("themeAudio").play();
@@ -257,7 +261,18 @@ lightMode.addEventListener('click', function(){
     skillNavlink.style.color = "black";
     musicNavlink.style.color = "black";
     contactNavlink.style.color = "black";
+
+    aboutHeader.style.backgroundColor = "rgba(255, 255, 255, .7)"
+    aboutHeader.style.color = "darkblue";
+    aboutHeader.style.borderRadius = "10px";
+    aboutHeader.style.borderColor = "darkblue";
+    aboutHeader.style.width = "fit-content";
+    aboutHeader.style.margin = "0 auto";
+    aboutHeader.style.padding = "5px 30px";
+    starmap.style.bottom = "65px";
+
     starmap.style.color = "black";
+    starmap.style.setProperty('--starmap-before-bg', 'white');
 
     planetTags.forEach(planetTag => {
         planetTag.style.color = "black";
@@ -284,7 +299,21 @@ lightMode.addEventListener('click', function(){
         skillBox.style.color = "black";
     });
 
+    projectHeader.style.backgroundColor = "rgba(255, 255, 255, .7)"
     projectHeader.style.color = "darkblue";
+    projectHeader.style.borderRadius = "10px";
+    projectHeader.style.borderColor = "darkblue";
+    projectHeader.style.width = "fit-content";
+    projectHeader.style.margin = "0 auto";
+
+    skillHeader.style.backgroundColor = "rgba(255, 255, 255, .7)"
+    skillHeader.style.color = "darkblue";
+    skillHeader.style.borderRadius = "10px";
+    skillHeader.style.borderColor = "darkblue";
+    skillHeader.style.width = "fit-content";
+    skillHeader.style.margin = "0 auto";
+
+    musicHeader.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
     myMusic.style.backgroundColor = "white";
     myMusic.style.color = "black";
     soundtrackMenu.style.backgroundColor = "white";
@@ -292,6 +321,10 @@ lightMode.addEventListener('click', function(){
     violinParagraph.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
     violinParagraph.style.color = "black";
     musicBlock.style.backgroundColor = "white";
+
+    sendEmail.style.borderColor = "black";
+    sendEmail.style.color = "black";
+    sendEmail.style.backgroundColor = "white";
 
     lightMode.style.display = "none";
     darkMode.style.display = "block";
@@ -307,6 +340,15 @@ darkMode.addEventListener('click', function(){
     musicNavlink.style.color = "yellow";
     contactNavlink.style.color = "yellow";
     starmap.style.color = "#83EEFF";
+    starmap.style.setProperty('--starmap-before-bg', 'black');
+
+    aboutHeader.style.backgroundColor = "transparent"
+    aboutHeader.style.color = "#83EEFF";
+    aboutHeader.style.borderRadius = "10px";
+    aboutHeader.style.borderColor = "none";
+    aboutHeader.style.width = "fit-content";
+    aboutHeader.style.margin = "0 auto";
+    aboutHeader.style.padding = "none";
 
     planetTags.forEach(planetTag => {
         planetTag.style.color = "#83EEFF";
@@ -333,7 +375,21 @@ darkMode.addEventListener('click', function(){
         skillBox.style.color = "yellow";
     });
 
+    projectHeader.style.backgroundColor = "transparent";
     projectHeader.style.color = "yellow";
+    projectHeader.style.borderRadius = "10px";
+    projectHeader.style.borderColor = "none";
+    projectHeader.style.width = "fit-content";
+    projectHeader.style.margin = "0 auto";
+
+    skillHeader.style.backgroundColor = "transparent";
+    skillHeader.style.color = "yellow";
+    skillHeader.style.borderRadius = "10px";
+    skillHeader.style.borderColor = "none";
+    skillHeader.style.width = "fit-content";
+    skillHeader.style.margin = "0 auto";
+
+    musicHeader.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
     myMusic.style.backgroundColor = "black";
     myMusic.style.color = "#83EEFF";
     soundtrackMenu.style.backgroundColor = "transparent";
@@ -341,6 +397,10 @@ darkMode.addEventListener('click', function(){
     violinParagraph.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
     violinParagraph.style.color = "#83EEFF";
     musicBlock.style.backgroundColor = "transparent";
+
+    sendEmail.style.borderColor = "yellow";
+    sendEmail.style.color = "yellow";
+    sendEmail.style.backgroundColor = "black";
 
     lightMode.style.display = "block";
     darkMode.style.display = "none";
@@ -408,8 +468,11 @@ soundtrackButton4.addEventListener('click', function(){
     currentAudio = "06 Rey's Theme.mp3";
 });
 
-sendButton.addEventListener('click', function(){
+sendEmail.addEventListener('click', function(){
     let messageInputValue = messageInput.value;
     messageInputValue = messageInputValue.replace(" ", "%20");
     window.location.href="mailto:ElenaWoodard27@gmail.com? &body="+ messageInputValue;
+    messageInput.value = "";
+    nameInput.value = "";
+    emailInput.value = "";
 })

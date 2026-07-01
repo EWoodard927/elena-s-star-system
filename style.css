@@ -159,19 +159,21 @@ body {
     padding: 100px;
     box-sizing: border-box;
     position: relative;
-    bottom: 85px;
+    bottom: 80px;
     padding: 130px;
     font-family: "Space Grotesk";
+    --starmap-before-bg: black;
 }
 
+
 .starmap::before {
-    content: '';
+    content:'';
     position: absolute;
     top:100px;
     left: 100px;
     right: 100px;
     bottom: 100px;
-    background-color: black;
+    background-color: var(--starmap-before-bg);
     z-index: -1;
 }
 
@@ -194,7 +196,7 @@ body {
 }
 
 .planetTag {
-    font-size: 20px;
+    font-size: 22px;
     color: #83EEFF;
     font-family: "Space Grotesk";
 }
@@ -291,7 +293,7 @@ body {
 
 .mustafarText p {
     margin: 0;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .hellbender {
@@ -305,7 +307,7 @@ body {
 }
 
 .deathStarContent p {
-    font-size: 22px;
+    font-size: 24px;
     font-family: "Space Grotesk";
 }
 
@@ -315,7 +317,7 @@ body {
 }
 
 .gencon {
-    width: 350px;
+    width: 325px;
     border: dashed #83EEFF 3px;
 }
 
@@ -325,7 +327,7 @@ body {
 }
 
 .tatooineContent p {
-    font-size: 22px;
+    font-size: 24px;
     font-family: "Space Grotesk";
 }
 
@@ -353,7 +355,7 @@ body {
 }
 
 .nabooContent p {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .backButtonNaboo {
@@ -561,6 +563,18 @@ body {
     opacity: 1;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.musicHeader {
+    background-color: rgba(0, 0, 0, .7);
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .myMusicContent {
@@ -572,6 +586,7 @@ body {
 .myMusicContent img {
     width: 350px;
     border-radius: 10px;
+    border: solid #83EEFF 3px;
 }
 
 .musicDivider {
@@ -655,17 +670,17 @@ body {
 }
 
 .contactBlock {
-    height: 700px;
+    height: 725px;
 }
 
 .contactScreen {
     width: 900px;
-    height: 600px;
-    font-size: 18px;
+    height: 625px;
+    font-size: 20px;
     font-family: "Space Grotesk";
     border-radius: 10px;
     background-color: rgba(255, 255, 255, .7);
-    padding: 25px;
+    padding: 18px;
     margin: 0 auto;
     display: flex;
     gap: 30px;
@@ -682,11 +697,12 @@ body {
     background-color: black;
     color: yellow;
     font-family: "StarJedi";
-    font-size: 18px;
+    font-size: 21px;
     transition: .4s box-shadow ease-in-out;
     transition: .4s scale ease-in-out;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
 }
 
 .sendEmail:hover {
@@ -704,16 +720,20 @@ body {
     text-align: center;
 }
 
+.contactInfo p {
+    font-size: 21px;
+}
+
 .nameInput,
 .emailInput {
     width: 475px;
-    height: auto;
-    font-size: 14px;
+    height: 30;
+    font-size: 20px;
 }
 
 .messageInput {
     display: block;
     width: 475px;
-    height: 200px;
-    font-size: 14px;
+    height: 150px;
+    font-size: 20px;
 }
