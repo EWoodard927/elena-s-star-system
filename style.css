@@ -53,6 +53,7 @@ audio {
 }
 
 body {
+    overscroll-behavior: none;
     background-image: url('star1.avif');
     background-repeat: no-repeat;
     background-size: cover;
@@ -736,4 +737,35 @@ body {
     width: 475px;
     height: 150px;
     font-size: 20px;
+}
+
+.sourceBlock {
+    background-color: black;
+    color: #83EEFF;
+    display: flex;
+    gap: 100px;
+    padding: 30px;
+    height: 800px;
+}
+
+.sourceMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sourceMenu button {
+    padding: 20px;
+    border-radius: 8px;
+    border: solid yellow 2px;
+    background-color: black;
+    color: yellow;
+    font-family: "StarJedi";
+    font-size: 21px;
+    transition: .3s box-shadow ease-in-out;
+    transition: .3s scale ease-in-out;
+}
+
+.sourceList {
+    display: block;
 }
