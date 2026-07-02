@@ -742,10 +742,12 @@ body {
 .sourceBlock {
     background-color: black;
     color: #83EEFF;
-    display: flex;
-    gap: 100px;
-    padding: 30px;
+    display: none;
+    gap: 80px;
+    padding: 20px;
     height: 800px;
+    font-family: "Space Grotesk";
+    font-size: 21px;
 }
 
 .sourceMenu {
@@ -768,4 +770,10 @@ body {
 
 .sourceList {
     display: block;
+}
+
+.imageList,
+.audioList,
+.inspoList {
+    display: none;
 }

@@ -65,6 +65,18 @@ let soundtrackMenu = document.querySelector(".soundtrackMenu");
 let violinParagraph = document.querySelector(".violinParagraph");
 let aboutHeader = document.querySelector(".about");
 
+//For purposes of the source citations:
+let sourceBlock = document.querySelector(".sourceBlock");
+let sourceMenu = document.querySelector(".sourceMenu");
+let imageSourceButton = document.querySelector(".imageSourceButton");
+let audioSourceButton = document.querySelector(".audioSourceButton");
+let inspoSourceButton = document.querySelector(".inspoSourceButton");
+let sourceList = document.querySelector(".sourceList");
+let imageList = document.querySelector(".imageList");
+let audioList = document.querySelector(".audioList");
+let inspoList = document.querySelector(".inspoList");
+let sourceMessage = document.querySelector(".sourceMessage");
+
 setTimeout(function(){
     document.getElementById("themeAudio").play();
 }, 7100);
@@ -124,6 +136,7 @@ homeNavlink.addEventListener('click', function(){
     skillBlock.style.display = "none";
     musicBlock.style.display = "none";
     contactBlock.style.display = "none";
+    sourceBlock.style.display = "none";
     crawl.style.opacity = 0;
     intro.style.opacity = 1;
 });
@@ -135,6 +148,7 @@ projectNavlink.addEventListener('click', function(){
     skillBlock.style.display = "none";
     musicBlock.style.display = "none";
     contactBlock.style.display = "none";
+    sourceBlock.style.display = "none";
 });
 
 skillNavlink.addEventListener('click', function(){
@@ -144,6 +158,7 @@ skillNavlink.addEventListener('click', function(){
     skillBlock.style.display = "block";
     musicBlock.style.display = "none";
     contactBlock.style.display = "none";
+    sourceBlock.style.display = "none";
 });
 
 musicNavlink.addEventListener('click', function(){
@@ -153,6 +168,7 @@ musicNavlink.addEventListener('click', function(){
     skillBlock.style.display = "none";
     musicBlock.style.display = "block";
     contactBlock.style.display = "none";
+    sourceBlock.style.display = "none";
 });
 
 contactNavlink.addEventListener('click', function(){
@@ -162,6 +178,7 @@ contactNavlink.addEventListener('click', function(){
     skillBlock.style.display = "none";
     musicBlock.style.display = "none";
     contactBlock.style.display = "block";
+    sourceBlock.style.display = "none";
 });
 
 audioOff.addEventListener('click', function(){
@@ -475,4 +492,31 @@ sendEmail.addEventListener('click', function(){
     messageInput.value = "";
     nameInput.value = "";
     emailInput.value = "";
-})
+});
+
+citeButton.addEventListener('click', function(){
+    homeBlock.style.display = "none";
+    movieScreen.style.display = "none";
+    sourceBlock.style.display = "flex";
+});
+
+imageSourceButton.addEventListener('click', function(){
+    imageList.style.display = "block";
+    audioList.style.display = "none";
+    inspoList.style.display = "none";
+    sourceMessage.style.display = "none";
+});
+
+audioSourceButton.addEventListener('click', function(){
+    imageList.style.display = "none";
+    audioList.style.display = "block";
+    inspoList.style.display = "none";
+    sourceMessage.style.display = "none";
+});
+
+inspoSourceButton.addEventListener('click', function(){
+    imageList.style.display = "none";
+    audioList.style.display = "none";
+    inspoList.style.display = "block";
+    sourceMessage.style.display = "none";
+});
