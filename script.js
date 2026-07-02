@@ -198,6 +198,12 @@ audioOff.addEventListener('click', function(){
     soundtrackButton3.disabled = true;
     soundtrackButton4.disabled = true;
     audioAlert.style.display = "block";
+    audioAlert.style.backgroundColor = "rgba(255, 255, 255, .7)"
+    audioAlert.style.borderRadius = "10px";
+    audioAlert.style.borderColor = "black";
+    audioAlert.style.width = "fit-content";
+    audioAlert.style.margin = "0 auto";
+    audioAlert.style.padding = "10px";
 });
 
 audioOn.addEventListener('click', function(){
@@ -343,6 +349,18 @@ lightMode.addEventListener('click', function(){
     sendEmail.style.color = "black";
     sendEmail.style.backgroundColor = "white";
 
+    sourceBlock.style.backgroundColor = "white";
+    sourceBlock.style.color = "black";
+    imageSourceButton.style.borderColor = "black";
+    imageSourceButton.style.color = "black";
+    imageSourceButton.style.backgroundColor = "white";
+    audioSourceButton.style.borderColor = "black";
+    audioSourceButton.style.color = "black";
+    audioSourceButton.style.backgroundColor = "white";
+    inspoSourceButton.style.borderColor = "black";
+    inspoSourceButton.style.color = "black";
+    inspoSourceButton.style.backgroundColor = "white";
+
     lightMode.style.display = "none";
     darkMode.style.display = "block";
 });
@@ -418,6 +436,18 @@ darkMode.addEventListener('click', function(){
     sendEmail.style.borderColor = "yellow";
     sendEmail.style.color = "yellow";
     sendEmail.style.backgroundColor = "black";
+
+    sourceBlock.style.backgroundColor = "black";
+    sourceBlock.style.color = "yellow";
+    imageSourceButton.style.borderColor = "yellow";
+    imageSourceButton.style.color = "yellow";
+    imageSourceButton.style.backgroundColor = "black";
+    audioSourceButton.style.borderColor = "yellow";
+    audioSourceButton.style.color = "yellow";
+    audioSourceButton.style.backgroundColor = "black";
+    inspoSourceButton.style.borderColor = "yellow";
+    inspoSourceButton.style.color = "yellow";
+    inspoSourceButton.style.backgroundColor = "black";
 
     lightMode.style.display = "block";
     darkMode.style.display = "none";
